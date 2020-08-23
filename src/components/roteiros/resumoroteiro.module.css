@@ -1,0 +1,28 @@
+.resumoroteiro {
+    height: 250x;
+    width: 350px;
+  }
+
+.roteiroinformation {
+    background-color: rgb(255, 255, 255);
+    height: 260px
+    
+  }
+
+  .image {
+    margin: 3rem auto;
+    max-width: 350px;
+    max-height: 200px
+  }
+
+  .name {
+    font-family: "Times New Roman", Times, serif;
+    color: #000;
+    font-size: 25px;
+  }
+
+  .duration {
+    font-family: "Times New Roman", Times, serif;
+    color: #000;
+    font-size: 15px;
+  }

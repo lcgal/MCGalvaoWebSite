@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import logo from "./logo.png"
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <header
     style={{
       background: `lightgrey`,
