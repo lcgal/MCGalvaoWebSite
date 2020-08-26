@@ -1,28 +1,42 @@
 .resumoroteiro {
-    height: 250x;
-    width: 350px;
+    margin: 1rem auto;
+    width: 266px;
   }
 
 .roteiroinformation {
     background-color: rgb(255, 255, 255);
-    height: 260px
-    
+    height: 280px;
+    border-style: groove;
+    border-color: rgb(255, 255, 255);
+    border-width: 1px;
+    border-top: 0px;
+    border-left: 0px;
   }
 
   .image {
-    margin: 3rem auto;
-    max-width: 350px;
-    max-height: 200px
+    width: 266px;
+    height: 200px;
   }
 
+
+
   .name {
+    margin-top: 10px;
+    margin-left: 5px;
     font-family: "Times New Roman", Times, serif;
-    color: #000;
+    color: rgb(153, 153, 153);
     font-size: 25px;
   }
 
+  .dividingline {
+    margin: 5px;
+    top: 50%
+  }
+
   .duration {
+    margin-top: 5px;
+    margin-left: 5px;
     font-family: "Times New Roman", Times, serif;
-    color: #000;
+    color:rgb(153, 153, 153);
     font-size: 15px;
   }

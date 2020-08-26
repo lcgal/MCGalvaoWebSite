@@ -14,7 +14,7 @@ const ResumoRoteiro = ({ post }) => {
     query {
       placeholderImage: file(relativePath: { eq: "iglu.png" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 350) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -24,15 +24,14 @@ const ResumoRoteiro = ({ post }) => {
 
     return (
         <div className = {componenttyles.resumoroteiro}>
-            <div className = {componenttyles.roteiroinformation}> 
-                <Link to={url} style={{ textDecoration: 'none' }}>
+              <Link to={url} style={{ textDecoration: 'none' }}>
+                  <div className = {componenttyles.roteiroinformation}> 
                     <Img className={componenttyles.image} fluid={data.placeholderImage.childImageSharp.fluid} alt=""></Img>
                     <section className={componenttyles.name}>{post.name}</section>
-                    <section className={componenttyles.duration}>
-                        <span>{ post.days } dias e { post.nights } noites</span>
-                    </section>
-                </Link>
-            </div>
+                    <hr className = {componenttyles.dividingline}></hr>
+                    <section className={componenttyles.duration}>{ post.days } dias e { post.nights } noites </section>
+                  </div>
+              </Link>
         </div>
     )
 }

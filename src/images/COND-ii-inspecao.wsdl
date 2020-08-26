@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+-<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://sap-services.edpbr.com.br/II" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://sap-services.edpbr.com.br/II" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema">
+
+
+-<wsdl:types>
+
+
+-<s:schema targetNamespace="http://sap-services.edpbr.com.br/II" elementFormDefault="qualified">
+
+
+-<s:element name="Enviar">
+
+
+-<s:complexType>
+
+
+-<s:sequence>
+
+<s:element name="credentials" type="tns:Credenciais" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="nota" type="tns:IINota" maxOccurs="1" minOccurs="0"/>
+
+</s:sequence>
+
+</s:complexType>
+
+</s:element>
+
+
+-<s:complexType name="Credenciais">
+
+
+-<s:sequence>
+
+<s:element name="AppId" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="AppSecret" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+</s:sequence>
+
+</s:complexType>
+
+
+-<s:complexType name="IINota">
+
+
+-<s:sequence>
+
+<s:element name="Tipo" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="Numero" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="Texto" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="GrupoCodificao" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="Codificacao" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="TextoCodificacao" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="GrupoMedida" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="CodigoMedida" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="TextoMedida" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="CodigoCliente" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="NomeCliente" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="Rua" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="Bairro" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="CEP" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="Cidade" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="Instalacao" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="CentroTrabalho" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="InicioAvaria" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="ConclusaoDesejada" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="Observacao" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="Empresa" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="IdPosteCaixaEt" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="CoordenadaPeeLatitude" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="CoordenadaPeeLongitude" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="Classe" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="DataLigacao" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="CodigoFaturamento" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="DataAlteracaoContrato" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="Situacao" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="PrimeiroSeloChaveAvericao" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="SegundoSeloChaveAvericao" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="Prefixo" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="NumeroSerie" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="PrimeiroSeloCaixaMedicao" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="SegundoSeloCaixaMedicao" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="PrimeiroSeloBlocoMedicao" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="SegundoSeloBlocoMedicao" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="PrefixoTCE01" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="NumeroSerieTCE01" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="RelacaoPrimariaTCE01" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="RelacaoSecundariaTCE01" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="PrefixoTCE02" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="NumeroSerieTCE02" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="RelacaoPrimariaTCE02" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="RelacaoSecundariaTCE02" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="PrefixoTCE03" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="NumeroSerieTCE03" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="RelacaoPrimariaTCE03" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="RelacaoSecundariaTCE03" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="HistoricoConsumo" type="tns:ArrayOfHistoricoConsumo" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="UnidadeLeitura" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="IdFiscal" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+</s:sequence>
+
+</s:complexType>
+
+
+-<s:complexType name="ArrayOfHistoricoConsumo">
+
+
+-<s:sequence>
+
+<s:element name="HistoricoConsumo" type="tns:HistoricoConsumo" maxOccurs="unbounded" minOccurs="0" nillable="true"/>
+
+</s:sequence>
+
+</s:complexType>
+
+
+-<s:complexType name="HistoricoConsumo">
+
+
+-<s:sequence>
+
+<s:element name="NumeroNota" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="DocCalculo" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="DtLeitura" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="Medidor" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="CTE" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="Leitura" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="Irregularidade" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="Consumo" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="Reativo" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+</s:sequence>
+
+</s:complexType>
+
+
+-<s:element name="EnviarResponse">
+
+
+-<s:complexType>
+
+
+-<s:sequence>
+
+<s:element name="EnviarResult" type="tns:Retorno" maxOccurs="1" minOccurs="0"/>
+
+</s:sequence>
+
+</s:complexType>
+
+</s:element>
+
+
+-<s:complexType name="Retorno">
+
+
+-<s:sequence>
+
+<s:element name="NumeroNota" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="TipoMensagem" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="Mensagem" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+</s:sequence>
+
+</s:complexType>
+
+</s:schema>
+
+</wsdl:types>
+
+
+-<wsdl:message name="EnviarSoapIn">
+
+<wsdl:part name="parameters" element="tns:Enviar"/>
+
+</wsdl:message>
+
+
+-<wsdl:message name="EnviarSoapOut">
+
+<wsdl:part name="parameters" element="tns:EnviarResponse"/>
+
+</wsdl:message>
+
+
+-<wsdl:portType name="InspecaoSoap">
+
+
+-<wsdl:operation name="Enviar">
+
+<wsdl:input message="tns:EnviarSoapIn"/>
+
+<wsdl:output message="tns:EnviarSoapOut"/>
+
+</wsdl:operation>
+
+</wsdl:portType>
+
+
+-<wsdl:binding name="InspecaoSoap" type="tns:InspecaoSoap">
+
+<soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+
+
+-<wsdl:operation name="Enviar">
+
+<soap:operation style="document" soapAction="http://sap-services.edpbr.com.br/II/Enviar"/>
+
+
+-<wsdl:input>
+
+<soap:body use="literal"/>
+
+</wsdl:input>
+
+
+-<wsdl:output>
+
+<soap:body use="literal"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+</wsdl:binding>
+
+
+-<wsdl:binding name="InspecaoSoap12" type="tns:InspecaoSoap">
+
+<soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+
+
+-<wsdl:operation name="Enviar">
+
+<soap12:operation style="document" soapAction="http://sap-services.edpbr.com.br/II/Enviar"/>
+
+
+-<wsdl:input>
+
+<soap12:body use="literal"/>
+
+</wsdl:input>
+
+
+-<wsdl:output>
+
+<soap12:body use="literal"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+</wsdl:binding>
+
+
+-<wsdl:service name="Inspecao">
+
+
+-<wsdl:port name="InspecaoSoap" binding="tns:InspecaoSoap">
+
+<soap:address location="http://localhost/cond/ii/Inspecao.asmx"/>
+
+</wsdl:port>
+
+
+-<wsdl:port name="InspecaoSoap12" binding="tns:InspecaoSoap12">
+
+<soap12:address location="http://localhost/cond/ii/Inspecao.asmx"/>
+
+</wsdl:port>
+
+</wsdl:service>
+
+</wsdl:definitions>
