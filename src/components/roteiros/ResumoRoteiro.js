@@ -2,34 +2,22 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import componenttyles from "./resumoroteiro.module.css"
-import Img from "gatsby-image"
-import { useStaticQuery, graphql } from "gatsby"
+import Thumbnail from "./Thumbnail.js"
+
 
 
 
 const ResumoRoteiro = ({ post }) => {
     const url = `/${post.id}/`
 
-    const data = useStaticQuery(graphql`
-    query {
-      placeholderImage: file(relativePath: { eq: "iglu.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 350) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
-
     return (
         <div className = {componenttyles.resumoroteiro}>
               <Link to={url} style={{ textDecoration: 'none' }}>
                   <div className = {componenttyles.roteiroinformation}> 
-                    <Img className={componenttyles.image} fluid={data.placeholderImage.childImageSharp.fluid} alt=""></Img>
-                    <section className={componenttyles.name}>{post.name}</section>
+                    <Thumbnail key={post.Id} post={post} />
+                    <section className={componenttyles.name}>{post.Name}</section>
                     <hr className = {componenttyles.dividingline}></hr>
-                    <section className={componenttyles.duration}>{ post.days } dias e { post.nights } noites </section>
+                    <section className={componenttyles.duration}>{ post.Days } dias e { post.Nights } noites </section>
                   </div>
               </Link>
         </div>
@@ -38,16 +26,17 @@ const ResumoRoteiro = ({ post }) => {
 
 ResumoRoteiro.propTypes = {
     post: PropTypes.shape({
-        id: PropTypes.string.isRequired,
-        name: PropTypes.string.isRequired,
-        image: PropTypes.string,
-        days: PropTypes.string,
-        nights: PropTypes.string,
-        tags: PropTypes.arrayOf(
+        Id: PropTypes.string.isRequired,
+        Name: PropTypes.string.isRequired,
+        Photo: PropTypes.string,
+        Days: PropTypes.string,
+        Nights: PropTypes.string,
+        Tags: PropTypes.arrayOf(
             PropTypes.shape({
                 name: PropTypes.string,
             })
         ),
+        Slug: PropTypes.string,
     }).isRequired,
 }
 
