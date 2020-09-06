@@ -14,7 +14,7 @@ const Thumbnail = ({ post }) => (
             relativePath
             name
             childImageSharp {
-                fluid(maxWidth: 350) {
+                fluid(maxWidth: 730) {
                     ...GatsbyImageSharpFluid
                 }
             }

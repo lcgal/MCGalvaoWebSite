@@ -8,7 +8,7 @@ import Thumbnail from "./Thumbnail.js"
 
 
 const ResumoRoteiro = ({ post }) => {
-    const url = `/${post.id}/`
+    const url = `/${post.Slug}/`
 
     return (
         <div className = {componenttyles.resumoroteiro}>

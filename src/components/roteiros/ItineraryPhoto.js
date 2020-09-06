@@ -1,10 +1,10 @@
 import React from 'react'
-import componenttyles from "./resumoroteiro.module.css"
+import componenttyles from "./itinerary.module.css"
 import PropTypes from 'prop-types'
 import Img from "gatsby-image"
 import { StaticQuery, graphql } from "gatsby"
 
-const Photo = ({ post }) => (
+const Photo = ({ filename }) => (
 <StaticQuery
     query={graphql`
     query {
@@ -14,7 +14,7 @@ const Photo = ({ post }) => (
             relativePath
             name
             childImageSharp {
-                fluid(maxWidth: 350) {
+                fluid(maxWidth: 730) {
                     ...GatsbyImageSharpFluid
                 }
             }
@@ -26,10 +26,10 @@ const Photo = ({ post }) => (
 
     render={(data) => {
         const image = data.images.edges.find(n => {
-            return n.node.relativePath.includes(post.Photo);
+            return n.node.relativePath.includes(filename);
         });
 
-        if (!image) { return <section className={componenttyles.duration}>{ post.Photo } not found </section>}
+        if (!image) { return <section className={componenttyles.duration}>{ filename } not found </section>}
         
         //return <section className={componenttyles.duration}>{ post.Days } dias e { post.Nights } noites </section>
         return <Img className={componenttyles.image} fluid={image.node.childImageSharp.fluid} alt=""></Img>
@@ -38,19 +38,9 @@ const Photo = ({ post }) => (
 )
 
 Photo.propTypes = {
-    post: PropTypes.shape({
-        Id: PropTypes.string.isRequired,
-        Name: PropTypes.string.isRequired,
-        Photo: PropTypes.string,
-        Days: PropTypes.string,
-        Nights: PropTypes.string,
-        Tags: PropTypes.arrayOf(
-            PropTypes.shape({
-                name: PropTypes.string,
-            })
-        ),
-    }).isRequired,
-}
+    filename: PropTypes.string.isRequired,
+    }
+
 
 
 
