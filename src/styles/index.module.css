@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    margin: 3rem auto;
+    width: 1000px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+  }
+
+
+.sliderimages {
+    width: 100%;
+  }

@@ -1,11 +1,13 @@
 .roteiro {
     margin: 1rem auto;
-    width: 266px;
+    width: 267px;
   }
 
 .roteiroinformation {
     background-color: rgb(255, 255, 255);
     height: 280px;
+    width: 267px;
+    margin-left: 25px;
     border-style: groove;
     border-color: rgb(255, 255, 255);
     border-width: 1px;
@@ -18,14 +20,12 @@
     height: 200px;
   }
 
-
-
   .name {
     margin-top: 10px;
     margin-left: 5px;
     font-family: "Times New Roman", Times, serif;
     color: rgb(153, 153, 153);
-    font-size: 25px;
+    font-size: 20px;
   }
 
   .dividingline {
