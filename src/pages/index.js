@@ -1,6 +1,8 @@
 import React from "react"
 import Layout from "../components/layout"
 
+import Header from "../components/header"
+
 import componenttyles from "../styles/index.module.css"
 
 import PhotoSlider from "../components/slider/PhotoSlider"
@@ -13,18 +15,18 @@ import SliderImages from "../testObjects/SliderImages.json"
 
 const Index = () => {
   return (
-      <>
-        <Layout isHome={true}>
-            <div>
-                <PhotoSlider className={componenttyles.sliderimages} images={SliderImages} />
-            </div>
-            <Container className={componenttyles.container}>
-                {data.map(( post ) => (
-                    <ResumoRoteiro key={post.Id} post={post} />
-                ))}
-            </Container>
-        </Layout>
-      </>
+    <>
+        <Header siteTitle={"teste"} />
+        <div>
+            <PhotoSlider className={componenttyles.sliderimages} images={SliderImages} />
+        </div>
+        <Container className={componenttyles.container}>
+            {data.map(( post ) => (
+                <ResumoRoteiro key={post.Id} post={post} />
+            ))}
+        </Container>
+
+    </>
   )
 }
 
